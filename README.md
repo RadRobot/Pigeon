@@ -43,9 +43,42 @@ usage:
 	config_object.pretty()
 ```
 
-The rationale behind using a python dictionary for a schema is for simplicity.
-You may even import the schema from another .py file this way.
-If it were a pure JSON schema, the schema file would have been a lot more verbose.
+sample configuration file:
+
+```
+	{
+		"user": "bob",
+		"name": "jimbob",
+		"age": 25,
+		"address": {
+			"country": "Canada",
+			"region": "Ontario",
+			"street#": 123
+		},
+		"weight": 180.75,
+		"items": [
+			{
+				"something": "idunno",
+				"something_else": 13
+			},
+			{
+				"something": "not sure",
+				"something_else": 1923
+			}
+		],
+		"simple": [
+			"asdf",
+			"second",
+			"third"
+		]
+	}
+```
+
+rationale:
+
+Simplicity. Most other python config libraries have complex design, and their own
+schema format. JSON already handles complex structures and types and is easily translated
+to a python dictionary - why not use it for configuration?
 
 schema rules:
 
