@@ -42,6 +42,9 @@ usage:
 	config_object = PConf('sample.conf', schema)
 
 	config_object.pretty()
+
+	print config_object.conf['name']
+	print config_object.conf['address']['country']
 ```
 
 sample configuration file:
