@@ -1,10 +1,10 @@
-# pigeon
-
-=========================================
+pigeon
+======
 
 Python JSON configuration library
 
 installation:
+-------------
 
 ```
 	git clone git@github.com:RadRobot/pigeon.git
@@ -15,6 +15,7 @@ installation:
 ```
 
 usage:
+------
 
 ```
 	from pigeon.pigeon import PConf
@@ -44,6 +45,7 @@ usage:
 ```
 
 sample configuration file:
+--------------------------
 
 ```
 	{
@@ -75,15 +77,18 @@ sample configuration file:
 ```
 
 rationale:
+----------
 
 Simplicity. Most other python config libraries have complex design, and their own
 schema format. JSON already handles complex structures and types and is easily translated
 to a python dictionary - why not use it for configuration?
 
 schema rules:
+-------------
 
 ```
 	- thou shal not make lists of lists
 	- each list item must follow the same type, or sub-schema
 	- thou shal only use primitive types
+	- its recursive
 ```
