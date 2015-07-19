@@ -14,6 +14,13 @@ class PConf():
 
 		self.validate(self.conf, self.schema)
 
+	def get(self, value, default=None):
+		""" get a value from the config """
+		if not default:
+			return self.conf.get(value)
+		else:
+			return self.conf.get(value, default)
+
 	def pretty(self):
 		"""pretty print the config"""
 		print json.dumps(self.conf, indent=4)
